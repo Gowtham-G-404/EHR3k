@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-3k-service
+spec:
+  selector:
+    app: demo-3k
+  ports:
+  - protocol: "TCP"
+    port: 6000
+    targetPort: 5000
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-3k
+spec:
+  selector:
+    matchLabels:
+      app: demo-3k
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo-3k
+    spec:
+      containers:
+      - name: demo-3k
+        image: demo_3k
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-3k-command
+  labels:
+    purpose: demonstrate-command
+spec:
+  containers:
+  - name: demo-3k-container
+    image: debian
+    command: ["printenv"]
+    args: ["HOSTNAME", "KUBERNETES_PORT"]
+  restartPolicy: OnFailure

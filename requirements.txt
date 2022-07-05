@@ -1,0 +1,6 @@
+flask
+pycryptodomex
+pandas
+requests
+sklearn
+joblib

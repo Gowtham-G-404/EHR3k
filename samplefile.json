@@ -1,0 +1,44 @@
+{
+  "id": 181,
+  "userId": 8,
+  "uuid": "169dca54-2dd1-458c-bdf0-cd605b7733a2",
+  "version": 7,
+  "name": "Pro_train_tweets",
+  "header": true,
+  "path": "/home/sparkflows/fire-data/NLP/part-00000-f832ab44-4cf7-4fbe-a984-e1544b3101bd-c000.csv",
+  "delimiter": ",",
+  "datasetType": "CSV",
+  "datasetSchema": "{colNames:[\"id\",\"text\",\"target\",\"lowertweets\"],colTypes:[\"INTEGER\",\"STRING\",\"DOUBLE\",\"STRING\"],colFormats:[\"\",\"\",\"\",\"\"],colMLTypes:[\"NUMERIC\",\"TEXT\",\"NUMERIC\",\"TEXT\"]}",
+  "dateCreated": "Apr 27, 2022 10:20:02 AM",
+  "dateLastUpdated": "Apr 27, 2022 10:20:02 AM",
+  "schemaModel": {
+    "schemaColList": [
+      {
+        "colName": "id",
+        "colType": "INTEGER",
+        "colFormat": "",
+        "colMLType": "NUMERIC"
+      },
+      {
+        "colName": "text",
+        "colType": "STRING",
+        "colFormat": "",
+        "colMLType": "TEXT"
+      },
+      {
+        "colName": "target",
+        "colType": "DOUBLE",
+        "colFormat": "",
+        "colMLType": "NUMERIC"
+      },
+      {
+        "colName": "lowertweets",
+        "colType": "STRING",
+        "colFormat": "",
+        "colMLType": "TEXT"
+      }
+    ]
+  },
+  "projectId": 67,
+  "dropSpecialCharacterInColumnName": true
+}
